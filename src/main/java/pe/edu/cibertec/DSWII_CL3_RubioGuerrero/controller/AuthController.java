@@ -9,10 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pe.edu.cibertec.DSWII_CL3_RubioGuerrero.model.bd.Usuario;
 import pe.edu.cibertec.DSWII_CL3_RubioGuerrero.model.response.UsuarioResponse;
 import pe.edu.cibertec.DSWII_CL3_RubioGuerrero.service.DetalleUsuarioService;
@@ -24,6 +21,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @RestController
 @RequestMapping(path = "api/v1/auth")
+@CrossOrigin(origins = "https://www.cibertec.edu.pe")
 public class AuthController {
     private DetalleUsuarioService detalleUsuarioService;
     private AuthenticationManager authenticationManager;
